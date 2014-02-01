@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Tweetlight : Display your latest tweets with pure JavaScript and PHP OAuth Library." />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Tweetlight</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/douglasevaristo/tweetlight">View on GitHub</a>
+
+          <h1 id="project_title">Tweetlight</h1>
+          <h2 id="project_tagline">Display your latest tweets with pure JavaScript and PHP OAuth Library.</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/douglasevaristo/tweetlight/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/douglasevaristo/tweetlight/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a name="tweetlight" class="anchor" href="#tweetlight"><span class="octicon octicon-link"></span></a><a href="http://www.pinceladasdaweb.com.br/blog/uploads/tweetlight/">Tweetlight</a>
+</h1>
+
+<p>Display your latest tweets with pure JavaScript and PHP OAuth Library.</p>
+
+<h2>
+<a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Usage</h2>
+
+<ol>
+<li>Add the code below to your HTML, where the latest tweets should appear:</li>
+</ol><div class="highlight highlight-html"><pre><span class="nt">&lt;ul</span> <span class="na">id=</span><span class="s">"tweets"</span><span class="nt">&gt;&lt;/ul&gt;</span>
+</pre></div>
+
+<ol>
+<li>Paste right before your page's closing <code>&lt;/body&gt;</code> tag:</li>
+</ol><div class="highlight highlight-console"><pre><span class="go">&lt;script type="text/javascript" src="src/tweetlight.js"&gt;&lt;/script&gt;</span>
+</pre></div>
+
+<ol>
+<li>From within a script tag or a JS file</li>
+</ol><div class="highlight highlight-javascript"><pre>    <span class="nx">Tweetlight</span><span class="p">.</span><span class="nx">init</span><span class="p">({</span>
+        <span class="nx">username</span><span class="o">:</span> <span class="s1">'pinceladasdaweb'</span><span class="p">,</span>    <span class="c1">// Twitter username</span>
+        <span class="nx">container</span><span class="o">:</span> <span class="s1">'#tweets'</span><span class="p">,</span>           <span class="c1">// domNode to attach to</span>
+        <span class="nx">count</span><span class="o">:</span> <span class="mi">4</span><span class="p">,</span>                       <span class="c1">// Number of tweets to display</span>
+        <span class="nx">onComplete</span><span class="o">:</span> <span class="kd">function</span><span class="p">(){</span>
+            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'Awesome APP'</span><span class="p">);</span> <span class="c1">// Callback to execute after fetch tweets</span>
+        <span class="p">}</span>
+    <span class="p">});</span>
+</pre></div>
+
+<ol>
+<li>In the tweets.php file, complete the <a href="https://dev.twitter.com/docs/auth/oauth/faq">Twitter OAuth settings</a>
+</li>
+</ol><div class="highlight highlight-php"><pre><span class="nv">$CONSUMER_KEY</span> <span class="o">=</span> <span class="s1">''</span><span class="p">;</span>
+<span class="nv">$CONSUMER_SECRET</span> <span class="o">=</span> <span class="s1">''</span><span class="p">;</span>
+<span class="nv">$ACCESS_TOKEN</span> <span class="o">=</span> <span class="s1">''</span><span class="p">;</span>
+<span class="nv">$ACCESS_TOKEN_SECRET</span> <span class="o">=</span> <span class="s1">''</span><span class="p">;</span>
+</pre></div>
+
+<h2>
+<a name="important-note" class="anchor" href="#important-note"><span class="octicon octicon-link"></span></a>Important Note</h2>
+
+<p>It is mandatory to file cacert.pem be on the same level/directory that codebird.php file because Twitter requires <a href="https://dev.twitter.com/discussions/24239">secure connections in their API</a>.</p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Tweetlight maintained by <a href="https://github.com/douglasevaristo">douglasevaristo</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
